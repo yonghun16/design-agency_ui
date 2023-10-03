@@ -12,8 +12,10 @@ html(lang="ko")
             .grid__col
                 header.header
                     div.header__top
-                        span.header__reviews 4.98
-                        span.header__label Best reviews
+                        span.s_logo S
+                        .header__top__wraper
+                            span.header__reviews 4.98
+                            span.header__label Best reviews
                     h1.header__title Duh!
                     h3.header__subtitle 
                         span 3d illustrations for 👀 digital designers and agencies! 🏳️‍🌈 For you!
@@ -28,12 +30,32 @@ html(lang="ko")
                             li.nav__item solutions
                             li.nav__item portfolio
                             li.nav__item blog
+                        span.light
+                            i(class="fa-solid fa-circle")
                         span.nav__cta hire us
-                    .gird__cell.more
-                        .grid__cell
-                            span recent collaborations
-                        .grid__cell
-                            span recent collaborations
-                    .grid__img.qrCode
+                    .grid__cells
+                        grid__cells__wrap
+                            .grid__cell
+                                .recent_colla__dot 
+                                    i(class="fa-solid fa-circle")
+                                .recent_colla__text recent collaborations
+                            .grid__cell
+                                span 
+                                    i(class="fa-brands fa-ubuntu")
+                                span CBP
+                                span.power ²
+                        .grid__cell__wrap
+                            .more_case more cases
+                    .grid__qrCode
+                        i(class="fa-solid fa-qrcode")
                 .blog-post
+                    .blog-post__header
+                        .blog-post__cell 01/02
+                        .blog-post__cell 
+                        .blog-post__cell 
+                        .blog-post__cell live prview
+                        .blog-post__cell
+                            i(class="fa-solid fa-arrow-rotate-left")
                     p Engage more users with stylish and modern 3d illustrations. Great addition to apps, websites, branding, presentations or ay other design project. 
+
+    script(src="https://kit.fontawesome.com/7489903411.js" crossorigin="anonymous")
