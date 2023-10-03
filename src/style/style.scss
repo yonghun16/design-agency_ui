@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   height: 55px;
+  width: 40px;
   border-radius: 20px;
   border: 1px solid #000000;
 }
@@ -213,7 +214,7 @@ body {
       border-radius: $cellRadius;
       .blog-post__header {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: 0.2fr repeat(4, 1fr) 0.2fr;
         .blog-post__cell {
           &:nth-child(1) {
             @include blogPostCellStyle;
@@ -250,7 +251,7 @@ body {
             @include blogPostCellStyle;
             font-weight: bold;
             font-size: 18px;
-            margin-left: 10px;
+            margin-left: 15px;
             background-color: #ffc830;
             height: 35px;
             width: 35px;
