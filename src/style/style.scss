@@ -1,0 +1,47 @@
+@import "reset";
+
+$gridGap: 2px;
+
+body {
+  font-size: 16px;
+  height: 100vh;
+  background-color: #7D49A9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  max-width: 80%;
+  height: 90%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #191919;
+  .grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    height: 100%;
+    gap : $gridGap;
+    & > * {
+      padding: 10px;
+      background-color: white;
+      border-radius: 15px;
+    }
+    .grid__col {
+      &:first-child {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        grid-template-rows: 1.8fr 1fr;
+      }
+    }
+    .header {
+      grid-column: span 2;
+    }
+    .grid__img {
+      background-image: url("https://source.unsplash.com/random");
+      background-size: cover;
+    }
+  }
+}
+
+
