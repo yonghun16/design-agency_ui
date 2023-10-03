@@ -1,6 +1,8 @@
 @import "reset";
 
 $gridGap: 2px;
+$backgroundColor: #191919;
+$cellRadius: 10px;
 
 body {
   font-size: 16px;
@@ -12,34 +14,50 @@ body {
 }
 
 .wrapper {
-  max-width: 80%;
+  width: 80%;
+  max-width: 1200px;
   height: 90%;
   padding: 20px;
   box-sizing: border-box;
-  background-color: #191919;
+  background-color: $backgroundColor;
   .grid {
     display: grid;
     grid-template-columns: 1.3fr 1fr;
     height: 100%;
     gap : $gridGap;
-    & > * {
-      padding: 10px;
-      background-color: white;
-      border-radius: 15px;
-    }
     .grid__col {
       &:first-child {
+        background-color: $backgroundColor;
+        gap : $gridGap;
         display: grid;
         grid-template-columns: repeat(2, 1fr); 
         grid-template-rows: 1.8fr 1fr;
       }
+      &:last-child {
+        display: grid;
+        gap : $gridGap;
+        grid-template-rows: 1.8fr 1fr;
+      }
+    }
+    .subgrid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+        grid-template-rows: 2fr 1.7fr;
     }
     .header {
+      background-color: white;
       grid-column: span 2;
+      border-radius: $cellRadius;
     }
     .grid__img {
       background-image: url("https://source.unsplash.com/random");
       background-size: cover;
+      border-radius: $cellRadius;
+    }
+    .blog-post {
+      padding: 20px;
+      background-color: white;
+      border-radius: $cellRadius;
     }
   }
 }
